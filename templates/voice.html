@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Voice Biometrics</title>
+  <link rel="stylesheet" type="text/css" href="../static/stylesheets/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="../static/stylesheets/example.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="../static/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon-16x16.png">
+  <link rel="manifest" href="../static/site.webmanifest">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="../static/stylesheets/voice.css">
+</head>
+<body class="exampleBody" data-url="{{ url_for('voice') }}">
+  <div id="mainColumn" class="ui middle aligned center aligned grid">
+    <div id="mainForm" class="ui large form">
+      <h2 class="ui center aligned icon header loginText">
+        <img src="{{ url_for('static', filename='images/makefg.png') }}" class="ui circular icon loginLogo">
+        Voice Biometrics
+      </h2>
+      <div class="ui segment secondColor">
+        <div id="waveform"></div>
+        <p style="font-size: 1.2em; color: #2B2B2B; text-align: center; margin-top: 20px;">
+          Please say the following phrase:
+        </p>
+        <h2 style="font-size: 2em; color: #01BAB6; text-align: center; margin-top: 10px;">
+          {{ common_phrase }}
+        </h2>
+  
+        <button id="record" aria-label="Record button">Record</button>
+        <button id="pause" style="display: none;" aria-label="Pause button">Pause</button>
+        <select id="mic-select" aria-label="Select microphone">
+          <option value="" hidden>Select mic</option>
+        </select>
+        
+        <p id="progress">00:00</p>
+        <div id="recordings" style="margin: 1rem 0"></div>
+
+        <!-- Commented out the file input -->
+        <!-- <label for="file-input" class="file-label">Choose File</label>
+        <input type="file" id="file-input" accept=".wav" style="display: none;">
+        <br> -->
+  
+        <button id="submit" aria-label="Submit button">Submit</button>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="../static/javascript/voice.js"></script>
+</body>
+</html>

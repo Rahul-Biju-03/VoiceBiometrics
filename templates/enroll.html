@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Voice Biometrics</title>
+  <link rel="stylesheet" type="text/css" href="../static/stylesheets/semantic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../static/stylesheets/example.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../static/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon-16x16.png">
+  <link rel="manifest" href="../static/site.webmanifest">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .toggle-password {
+      cursor: pointer;
+      position: absolute;
+      right: 10px;
+      top: 35px;
+      z-index: 2;
+    }
+    .field-icon {
+      float: right;
+      margin-left: -25px;
+      margin-top: -25px;
+      position: relative;
+      z-index: 2;
+    }
+    .container {
+      padding-top: 50px;
+      margin: auto;
+    }
+  </style>
+</head>
+<body class="exampleBody">
+  <div id="mainColumn" class="ui middle aligned center aligned grid">
+    <div id="mainForm" class="ui large form">
+      <h2 class="ui center aligned icon header loginText">
+        <img src="{{ url_for('static', filename='images/makefg.png')}}" class="ui circular icon loginLogo">
+        Voice Biometrics
+      </h2>
+
+      <div id="formOverlay">
+        <form autocomplete="off">
+          <input type="text" style="display:none">
+          <input type="password" style="display:none">
+          
+          <div class="ui segment">
+            <div id="enrollmentMessage" class="ui message">
+              <div class="ui center aligned header">
+                User Signup
+              </div>
+            </div>
+            <div class="field" id="userField">
+              <div class="ui left icon input">
+                <i class="user icon"></i>
+                <input type="text" name="username" placeholder="Enter your Username" autocomplete="off">
+              </div>
+              <div id="usernamePointer" class="ui red basic below pointing label">
+                Incorrect syntax.
+              </div>
+            </div>
+            <div class="field" id="passwordField">
+              <div class="ui left icon input">
+                <i class="lock icon"></i>
+                <input id="password-field" type="password" name="password" placeholder="Enter your Password" autocomplete="new-password">
+                <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+              </div>
+              <div id="passwordPointer" class="ui red basic below pointing label">
+                Your password should be more than 6 characters.
+              </div>
+            </div>
+            <div class="field" id="repasswordField">
+              <div class="ui left icon input">
+                <i class="lock icon"></i>
+                <input id="repassword-field" type="password" name="repassword" placeholder="Re-enter your Password" autocomplete="new-password">
+                <span toggle="#repassword-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+              </div>
+              <div id="repasswordPointer" class="ui red basic below pointing label">
+                Your passwords don't match.
+              </div>
+            </div>
+          </div>
+
+          <div id="nextButton" class="fluid ui animated button viBtnStyle viBtnColor" tabindex="0">
+            <div class="visible content">Next</div>
+            <div class="hidden content">
+              Record your Voice Samples
+            </div>
+          </div>
+        </form>
+        <div style="background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin-top: 20px;">
+          <p style="font-size: 1.1em; color: #2B2B2B; text-align: center; line-height: 1.5;">
+            Once enrollment is complete, you will be prompted to articulate the phrase displayed on the screen to confirm your identity. To ensure accuracy, please make sure you are in a quiet environment.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../static/javascript/enroll.js"></script>
+</body>
+</html>

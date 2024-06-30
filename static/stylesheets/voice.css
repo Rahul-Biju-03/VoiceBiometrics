@@ -1,0 +1,88 @@
+/* Style for the Record button */
+#record {
+  background-color: #01BAB6; /* Main button color */
+  color: white; /* Text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Padding */
+  font-size: 1em; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+#record:hover {
+  background-color: #019f93; /* Darker shade on hover */
+}
+
+/* Style for the Pause button */
+#pause {
+  background-color: #ff6961; /* Main button color */
+  color: white; /* Text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Padding */
+  font-size: 1em; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+#pause:hover {
+  background-color: #d55a50; /* Darker shade on hover */
+}
+
+/* Style for the Submit button */
+#submit {
+  background-color: black; /* Main button color */
+  color: white; /* Text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Same padding as other buttons */
+  font-size: 1em; /* Same font size as other buttons */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition */
+  margin-top: 10px; /* Space above the button */
+  width: 100%; /* Make the button width 100% */
+  max-width: 300px; /* Set a max width for the button */
+  display: block; /* Ensure the button is block level */
+  margin-left: auto; /* Center the button horizontally */
+  margin-right: auto; /* Center the button horizontally */
+}
+
+#submit:hover {
+  background-color: #333333; /* Darker shade on hover */
+}
+
+/* Style for the Select microphone dropdown */
+#mic-select {
+  background-color: white; /* Background color */
+  color: black; /* Text color */
+  border: 1px solid #ccc; /* Border color */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px; /* Padding */
+  font-size: 1em; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: border-color 0.3s ease; /* Smooth transition */
+  margin-top: 10px; /* Space above the dropdown */
+}
+
+#mic-select:hover {
+  border-color: #888; /* Darker border on hover */
+}
+
+/* Style for the Choose File button */
+.file-label {
+  background-color: #01BAB6; /* Main button color */
+  color: white; /* Text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Padding */
+  font-size: 1em; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition */
+  margin-top: 1rem; /* Space above the label */
+  display: inline-block; /* Make it inline-block for proper sizing */
+}
+
+.file-label:hover {
+  background-color: #019f93; /* Darker shade on hover */
+}
